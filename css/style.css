@@ -1,0 +1,45 @@
+.box{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.box2{
+    flex-direction: row-reverse;
+
+}
+.car{
+    position: absolute;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+.car1{
+    animation-name: walkSpace;
+    animation-direction: reverse;
+}
+.car2{
+    animation-name: walk;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+}
+.car3{
+    animation-name: walk;
+    animation-delay: 2.5s;
+    animation-direction: reverse;
+    animation-timing-function: ease-in;
+}
+@keyframes walkSpace {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: calc(100% - 400px);
+    }
+}
+@keyframes walk {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: calc(100% - 200px);
+    }
+}
